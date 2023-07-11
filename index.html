@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="icon" type="image/x-icon" href="weather-cloudy.svg">
 </head>
 <body>
     <script defer src="bundle.js"></script>
@@ -14,8 +15,21 @@
         </div>
 
         <div class="weather-info">
-            <h2>City Name</h2>
-            <h3>Feels like: 0 celsius</h3>
+            <div>
+                <h3 id="condition"></h3>
+                <h2 id="city-name"></h2>
+            </div>
+            <div class="details-section">
+                <div>
+                    <h1 id="temperature"></h1>
+                </div>
+                <div class="more-info">
+                    <h4 id="feels-like"></h4>
+                    <h4 id="wind"></h4>
+                    <h4 id="humidity"></h4>
+                </div>
+            </div>
+            
         </div>
     </div>
 </body>
