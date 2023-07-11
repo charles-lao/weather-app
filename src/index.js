@@ -1,9 +1,7 @@
 import './style.css';
 
-const cityName = 'baguio';
 
-
-async function getWeather() {
+async function getWeather(cityName) {
     const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=c52ef444b9bf4a17955163903231806&q=${cityName}`);
     const weatherData = await response.json();
     console.log(weatherData);
@@ -30,4 +28,19 @@ const displayData  = (weather) => {
 
 }
 
-getWeather();
+const setControllers = () => {
+    const searchCity = document.querySelector('#search');
+
+    searchCity.addEventListener('keypress', (e) => {
+        if(e.keyCode === 13) {
+            getWeather(searchCity.value);
+        }
+    });
+}
+
+const init = () => {
+    getWeather('baguio');
+    setControllers();
+}
+
+init();
