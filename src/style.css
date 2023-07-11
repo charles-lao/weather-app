@@ -5,6 +5,9 @@
 
 * {
     font-family: 'Roboto';
+    color: white;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -13,14 +16,28 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
-    width: 1080px;
+    width: 100vw;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
 }
 
 input[type=text] {
     font-family: 'Roboto';
     text-align: center;
-    padding: 5px;
-    background-color: grey;
-    opacity: .5;
+    padding: 10px;
+    background-color: rgba(137, 133, 133, 0.5);
     border: none;
+    font-size: 1.3rem;
+    color: white;
+    margin: 30px;
+}
+
+.weather-info {
+    margin: 30px;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
 }
